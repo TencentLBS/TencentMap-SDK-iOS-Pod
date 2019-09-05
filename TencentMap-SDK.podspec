@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "TencentMap-SDK"
-  spec.version      = "4.2.6.2"
+  spec.version      = "4.2.7"
   spec.summary      = "Tencent iOS map SDK."
 
   
@@ -22,21 +22,21 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
 
 
-  spec.source       = { "http" => "https://wecar.myapp.com/myapp/mapwecar/shuttle/open_platform/iOS/TencentMapSDK_iOS_3D_v4.2.6.2.zip" }
+  spec.source       = { "http" => "https://wecar.myapp.com/myapp/mapwecar/shuttle/open_platform/iOS/TencentMapSDK_iOS_3D_v4.2.7.zip" }
 
 
-  spec.public_header_files = "TencentMapSDK_iOS_3D_v4.2.6.2/sdk/QMapKit.framework/Headers/*.h"
+  spec.public_header_files = "sdk/QMapKit.framework/Headers/*.h"
 
-  spec.source_files  = "TencentMapSDK_iOS_3D_v4.2.6.2/sdk/QMapKit.framework/Headers/*.h"
+  spec.source_files  = "sdk/QMapKit.framework/Headers/*.{h}"
 
 
-  spec.resources = "TencentMapSDK_iOS_3D_v4.2.6.2/sdk/QMapKit.framework/QMapKit.bundle"
+  spec.resources = "sdk/QMapKit.framework/QMapKit.bundle"
 
   spec.frameworks = "UIKit", "CoreText", "CoreLocation","QuartzCore"
 
   spec.libraries = "c++", "sqlite3.0"
 
-  spec.ios.vendored_frameworks = "TencentMapSDK_iOS_3D_v4.2.6.2/sdk/QMapKit.framework"
+  spec.ios.vendored_frameworks = "sdk/QMapKit.framework"
 
   spec.compiler_flags = "-ObjC"
 
