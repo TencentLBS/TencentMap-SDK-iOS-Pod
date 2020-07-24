@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Tencent-MapSDK"
-  spec.version      = "4.2.7"
+  spec.version      = "4.2.8"
   spec.summary      = "Tencent iOS map SDK."
 
   
@@ -15,14 +15,14 @@ Pod::Spec.new do |spec|
 
   spec.license      = {:type => "CopyRight", :text => "Copyright © 1998-2018 Tencent All Rights Reserved"}
   
-  spec.author       = { "TencentLBS" => "tencentlbspod@gmail.com" }
+  spec.author       = { "TencentLBS" => "tencentlbspod@outlook.com" }
 
   spec.platform     = :ios, "8.0"
 
   spec.requires_arc = true
 
 
-  spec.source       = { "http" => "https://wecar.myapp.com/myapp/mapwecar/shuttle/open_platform/iOS/TencentMapSDK_iOS_3D_v4.2.7.zip" }
+  spec.source       = { "http" => "https://wecar.myapp.com/myapp/mapwecar/shuttle/open_platform/iOS/TencentMapSDK_iOS_3D_v4.2.8.zip" }
 
 
   spec.public_header_files = "sdk/QMapKit.framework/Headers/*.h"
