@@ -5,7 +5,6 @@ Pod::Spec.new do |spec|
   spec.version      = "4.3.9"
   spec.summary      = "Tencent iOS map SDK."
 
-  
   spec.description  = <<-DESC
                         A podspec for Tencent iOS map SDK deployment starts from v4.2.6.2
                    DESC
