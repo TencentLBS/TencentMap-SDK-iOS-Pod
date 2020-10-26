@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "Tencent-MapSDK"
-  spec.version      = "4.3.9"
+  spec.version      = "4.3.9.1"
   spec.summary      = "Tencent iOS map SDK."
 
   spec.description  = <<-DESC
@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
 
   spec.requires_arc = true
 
-  spec.source       = { "http" => "https://mapapi.qq.com/sdk/map/iOS/TencentMapSDK_iOS_3D_v4.3.9.zip" }
+  spec.source       = { "http" => "https://mapapi.qq.com/sdk/map/iOS/TencentMapSDK_iOS_3D_v4.3.9.1.zip" }
 
   spec.public_header_files = "sdk/QMapKit.framework/Headers/*.h"
 
