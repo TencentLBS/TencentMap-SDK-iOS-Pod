@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "Tencent-MapSDK"
-  spec.version      = "4.3.9.3"
+  spec.version      = "4.4.0"
   spec.summary      = "Tencent iOS map SDK."
 
   spec.description  = <<-DESC
@@ -22,19 +22,19 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 
-  spec.source       = { "http" => "https://mapapi.qq.com/sdk/map/iOS/TencentMapSDK_iOS_3D_v4.3.9.3.zip" }
+  spec.source       = { "http" => "https://mapapi.qq.com/sdk/map/iOS/TencentMapSDK_iOS_3D_v4.4.0.zip" }
 
-  spec.public_header_files = "TencentMapSDK_iOS_3D_v4.3.9.3/sdk/QMapKit.framework/Headers/*.h"
+  spec.public_header_files = "sdk/QMapKit.framework/Headers/*.h"
 
-  spec.source_files  = "TencentMapSDK_iOS_3D_v4.3.9.3/sdk/QMapKit.framework/Headers/*.{h}"
+  spec.source_files  = "sdk/QMapKit.framework/Headers/*.{h}"
 
-  spec.resources = "TencentMapSDK_iOS_3D_v4.3.9.3/sdk/QMapKit.framework/QMapKit.bundle"
+  spec.resources = "sdk/QMapKit.framework/QMapKit.bundle"
 
   spec.frameworks = "UIKit", "CoreText", "CoreLocation","QuartzCore"
 
   spec.libraries = "c++", "sqlite3.0"
 
-  spec.ios.vendored_frameworks = "TencentMapSDK_iOS_3D_v4.3.9.3/sdk/QMapKit.framework"
+  spec.ios.vendored_frameworks = "sdk/QMapKit.framework"
 
   spec.compiler_flags = "-ObjC"
 
