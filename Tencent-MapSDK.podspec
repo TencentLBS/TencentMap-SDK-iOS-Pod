@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "Tencent-MapSDK"
-  spec.version      = "4.4.1.1"
+  spec.version      = "4.4.2"
   spec.summary      = "Tencent iOS map SDK."
 
   spec.description  = <<-DESC
@@ -22,20 +22,37 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 
-  spec.source       = { "http" => "https://mapapi.qq.com/sdk/map/iOS/TencentMapSDK_iOS_3D_v4.4.1.1.zip" }
-
-  spec.public_header_files = "sdk/QMapKit.framework/Headers/*.h"
-
-  spec.source_files  = "sdk/QMapKit.framework/Headers/*.{h}"
-
-  spec.resources = "sdk/QMapKit.framework/QMapKit.bundle"
+  spec.source       = { "http" => "https://mapapi.qq.com/sdk/map/iOS/TencentMapSDK_iOS_3D_v4.4.2.zip" }
 
   spec.frameworks = "UIKit", "CoreText", "CoreLocation","QuartzCore"
 
-  spec.libraries = "c++", "sqlite3.0"
+  spec.resources = "TencentMapSDK_iOS_3D_v4.4.2/sdk/QMapKit.framework/QMapKit.bundle"
 
-  spec.ios.vendored_frameworks = "sdk/QMapKit.framework"
+  spec.vendored_frameworks = "TencentMapSDK_iOS_3D_v4.4.2/sdk/QMapKit.framework", "TencentMapSDK_iOS_3D_v4.4.2/sdk/QMapVisualPlugin.framework"
+
+  spec.libraries = "c++", "sqlite3.0"
 
   spec.compiler_flags = "-ObjC"
 
+  spec.subspec 'QMapKit' do |m|
+    m.public_header_files = "TencentMapSDK_iOS_3D_v4.4.2/sdk/QMapKit.framework/Headers/*.h"
+
+    m.source_files  = "TencentMapSDK_iOS_3D_v4.4.2/sdk/QMapKit.framework/Headers/*.{h}"
+
+    m.vendored_frameworks = "TencentMapSDK_iOS_3D_v4.4.2/sdk/QMapKit.framework"
+  end  
+
+  spec.subspec 'QMapVisualPlugin' do |v|
+    v.source_files = "TencentMapSDK_iOS_3D_v4.4.2/sdk/QMapVisualPlugin.framework/Headers/*.{h}"
+    v.public_header_files = "TencentMapSDK_iOS_3D_v4.4.2/sdk/QMapVisualPlugin.framework/Headers/*.h"
+    v.vendored_frameworks = "TencentMapSDK_iOS_3D_v4.4.2/sdk/QMapVisualPlugin.framework"
+  end
+
+  spec.subspec 'QMapSDKUtils' do |u|
+    u.source_files = "TencentMapSDK_iOS_3D_v4.4.2/TencentMapSDK-Utils/SDK/QMapSDKUtils.framework/Headers/*.{h}"
+    u.public_header_files = "TencentMapSDK_iOS_3D_v4.4.2/TencentMapSDK-Utils/SDK/QMapSDKUtils.framework/Headers/*.h"
+    u.vendored_frameworks = "TencentMapSDK_iOS_3D_v4.4.2/TencentMapSDK-Utils/SDK/QMapSDKUtils.framework"
+  end
+
 end
+
