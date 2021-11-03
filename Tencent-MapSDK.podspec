@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "Tencent-MapSDK"
-  spec.version      = "4.4.5"
+  spec.version      = "4.4.5.2"
   spec.summary      = "Tencent iOS map SDK."
 
   spec.description  = <<-DESC
@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 
-  spec.source       = { "http" => "https://mapapi.qq.com/sdk/map/iOS/TencentMapSDK_iOS_3D_v4.4.5.zip" }
+  spec.source       = { "http" => "https://mapapi.qq.com/sdk/map/iOS/TencentMapSDK_iOS_3D_v4.4.5.2.zip" }
 
   spec.frameworks = "UIKit", "CoreText", "CoreLocation","QuartzCore"
 
