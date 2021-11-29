@@ -1,7 +1,7 @@
 
 
 Pod::Spec.new do |spec|
-  spec.name         = "Tencent-MapSDK"
+  spec.name         = "MMTestOnly"
   spec.version      = "4.4.7"
   spec.summary      = "Tencent iOS map SDK."
 
